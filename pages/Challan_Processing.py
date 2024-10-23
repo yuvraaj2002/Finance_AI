@@ -22,10 +22,10 @@ st.markdown(
 )
 
 # Setting up the llama cloud API for parsing PDF
-os.environ["LLAMA_CLOUD_API_KEY"] = os.getenv("LLAMA_CLOUD_API_KEY")
+os.environ["LLAMA_CLOUD_API_KEY"] = st.secrets["general"]["LLAMA_CLOUD_API_KEY"]
 
 def initialize_parser():
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = OpenAI(api_key=st.secrets["general"]["OPENAI_API_KEY"])
     parser = LlamaParse(result_type="markdown", language="en")
     return client, parser
 
