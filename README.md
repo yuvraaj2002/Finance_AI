@@ -2,6 +2,8 @@
 
 This project is designed to help users streamline various business processes such as authentication, data extraction, automation, analysis, and reporting using cutting-edge technologies like Claude and OpenAI, integrated with APIs and other services. The repository contains all the code and instructions you need to get started with the platform.
 
+Here is the link to deployed app ➡️ https://homwnqpiyddvikznnhw9uu.streamlit.app/
+
 <a name="readme-top"></a>
 
 <!-- TABLE OF CONTENTS -->
