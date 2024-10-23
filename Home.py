@@ -35,7 +35,8 @@ except ValueError as e:
 # Initialize Google OAuth2 client
 client_id = os.getenv("client_id")
 client_secret = os.getenv("client_secret")
-redirect_url = "https://homwnqpiyddvikznnhw9uu.streamlit.app/"  # Your redirect URL
+redirect_url = "https://homwnqpiyddvikznnhw9uu.streamlit.app"
+
 
 client = GoogleOAuth2(client_id=client_id, client_secret=client_secret)
 
