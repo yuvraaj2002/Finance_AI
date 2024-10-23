@@ -29,15 +29,15 @@ def load_bm25_encoder():
 
 @st.cache_resource
 def load_pinecone_client():
-    return Pinecone(api_key=st.secrets["general"]["PINECONE_API_KEY"])
+    return Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
 
 @st.cache_resource
 def load_openai_client():
-    return OpenAI(api_key=st.secrets["general"]["OPENAI_API_KEY"])
+    return OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 @st.cache_resource
 def load_embedding_model():
-    return OpenAIEmbeddings(api_key=st.secrets["general"]["OPENAI_API_KEY"])
+    return OpenAIEmbeddings(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Custom CSS for styling Streamlit
 st.markdown(
