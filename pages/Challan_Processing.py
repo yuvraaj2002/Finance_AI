@@ -6,6 +6,8 @@ from openai import OpenAI
 import pandas as pd
 from llama_parse import LlamaParse
 import threading
+from dotenv import load_dotenv
+load_dotenv()
 
 # Custom CSS for styling Streamlit
 st.markdown(
