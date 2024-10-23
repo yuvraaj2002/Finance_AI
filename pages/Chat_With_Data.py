@@ -104,7 +104,7 @@ class DataProcessing:
             for chunk in chunks:
                 corpus.append(chunk.page_content)
         except AttributeError as e:
-            st.warning(f"An error occurred while processing the YouTube video: {str(e)}")
+            st.warning(f"Subtitles are disabled for this video internally for processing.")
 
     def process_pdf(self, pdf_file, corpus):
         """Process PDF file and add text chunks to corpus"""
