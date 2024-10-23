@@ -1,13 +1,3 @@
-title: FinRAG
-emoji: 🤖
-colorFrom: blue
-colorTo: gray
-sdk: streamlit
-sdk_version: 1.39.0
-app_file: Home.py
-pinned: false
-license: mit
-
 # Finance-RAG
 
 This project is designed to help users streamline various business processes such as authentication, data extraction, automation, analysis, and reporting using cutting-edge technologies like Claude and OpenAI, integrated with APIs and other services. The repository contains all the code and instructions you need to get started with the platform.
