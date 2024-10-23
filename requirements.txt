@@ -28,3 +28,4 @@ langchain_openai
 firebase-admin
 httpx-oauth
 ydata-profiling
+llama_parse
