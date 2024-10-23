@@ -6,6 +6,8 @@ import os
 from httpx_oauth.clients.google import GoogleOAuth2
 from dotenv import load_dotenv
 
+st.set_page_config(layout="wide")
+
 # Load environment variables from .env file
 load_dotenv()
 
