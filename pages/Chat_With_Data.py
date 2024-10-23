@@ -104,7 +104,7 @@ class DataProcessing:
             for chunk in chunks:
                 corpus.append(chunk.page_content)
         except AttributeError as e:
-            st.error(f"An error occurred while processing the YouTube video: {str(e)}")
+            st.warning(f"An error occurred while processing the YouTube video: {str(e)}")
 
     def process_pdf(self, pdf_file, corpus):
         """Process PDF file and add text chunks to corpus"""
@@ -123,7 +123,7 @@ class DataProcessing:
                 for chunk in chunks:
                     corpus.append(chunk.page_content)
             except Exception as e:
-                st.error(f"An error occurred while processing the PDF: {str(e)}")
+                st.warning(f"An error occurred while processing the PDF: {str(e)}")
 
     def process_whatsapp(self, text, corpus):
         """Process WhatsApp text conversation and add it to corpus"""
@@ -243,7 +243,7 @@ class DataProcessing:
             return generated_response
 
         except Exception as e:
-            return f"An error occurred while generating the response: {str(e)}"
+            st.warning(f"An error occurred while generating the response: {str(e)}")
 
 
 def chat_with_docs():
