@@ -103,8 +103,8 @@ class DataProcessing:
             chunks = self.splitter.create_documents([yt_captions])
             for chunk in chunks:
                 corpus.append(chunk.page_content)
-        except (YouTubeTranscriptApi.TranscriptsDisabled, YouTubeTranscriptApi.NoTranscriptFound):
-            st.error("Transcript is disabled or not found for this video.")
+        except AttributeError as e:
+            st.error(f"An error occurred while processing the YouTube video: {str(e)}")
 
     def process_pdf(self, pdf_file, corpus):
         """Process PDF file and add text chunks to corpus"""
