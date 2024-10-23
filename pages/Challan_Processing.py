@@ -148,3 +148,4 @@ def challan_processing():
                 st.dataframe(final_df, use_container_width=True)
 
     # Removed the display tab for PDFs
+challan_processing()
