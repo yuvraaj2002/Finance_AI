@@ -108,7 +108,7 @@ def parse_pdf_document(file, file_name):
         return None
 
 def challan_processing():
-    upload_tab, display_tab = st.columns(spec=(1.5, 1), gap="large")
+    upload_tab = st.columns(spec=(1.5, 1), gap="large")[0]  # Adjusted to use only one column for upload
     all_rows = []  # Store rows of data
     pdf_data_list = []  # Store PDF data for reuse in display
 
@@ -147,12 +147,4 @@ def challan_processing():
                 final_df = pd.DataFrame(all_rows)
                 st.dataframe(final_df, use_container_width=True)
 
-    if pdf_data_list:
-        with display_tab:
-            for pdf_data, file_name in pdf_data_list:
-                b64_pdf = base64.b64encode(pdf_data).decode("utf-8")
-                st.write(f"PDF Preview: {file_name}")
-                pdf_display = f'<embed src="data:application/pdf;base64,{b64_pdf}" width="580" height="650" type="application/pdf">'
-                st.markdown(pdf_display, unsafe_allow_html=True)
-
-challan_processing()
+    # Removed the display tab for PDFs
