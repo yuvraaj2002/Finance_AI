@@ -13,6 +13,8 @@ from PyPDF2 import PdfReader
 from langchain_community.document_loaders import PyMuPDFLoader
 from youtube_transcript_api import YouTubeTranscriptApi
 import tempfile
+import nltk
+nltk.download('punkt_tab')
 
 # For reranking
 from langchain.retrievers import ContextualCompressionRetriever
